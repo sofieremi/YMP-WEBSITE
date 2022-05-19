@@ -37,9 +37,9 @@
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href={% url 'main' %} class="nav__link active-link" id="main_page">
-                        <i class='bx bx-home-alt nav__icon'></i>
-                        <span class="nav__name">Главная</span>
+                    <a href={% url 'main' %} class="nav__link active-link id="main_page">
+                    <i class='bx bx-home-alt nav__icon'></i>
+                    <span class="nav__name">Главная</span>
                     </a>
                 </li>
 
@@ -55,24 +55,19 @@
                         <span class="nav__name">Новости</span>
                     </a>
                 </li>
-<<<<<<< HEAD
-
                 <li class="nav__item">
                     <a href={% url 'profile' %} class="nav__link" id="profile_page">
                         <i class='bx bx-book-alt nav__icon'></i>
                         <span class="nav__name">Профиль</span>
-=======
                 <li>
                     <a href={% url 'login' %}>
-                        Профиль
->>>>>>> 88a9906bf703f27d0b7cb42620d35f90fef40a3a
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
 </header>
-<<<<<<< HEAD
+
 <section>
     <div class="container">
         <div class="content">
@@ -229,40 +224,40 @@
         }
     })
 </script>
-=======
 
 
 
+<div class="card_register">
+    <div class="card-body">
+        <h4 class="card-title">Register account</h4>
+        <form method="post">
+            {% csrf_token %}
+            <div class="reg_form_view">
 
-    <div class="card_register">
-        <div class="card-body">
-            <h4 class="card-title">Register account</h4>
-            <form method="post">
-                {% csrf_token %}
-                <div class="reg_form_view">
+                <p><input class="input_1" type="text" name="last_name" maxlength="150" id="id_last_name"
+                          placeholder="Фамилия"></p>
+                <p><input class="input_1" type="text" name="first_name" maxlength="150" id="id_first_name"
+                          placeholder="Имя"></p>
+                <p><input class="input_1" type="number" name="age" required="" id="id_age" placeholder="Возраст"></p>
+                <p><input class="input_1" type="text" name="username" maxlength="254"
+                          id="id_email" placeholder="username"></p>
+                <p><input class="input_1" type="text" name="specialization" maxlength="150" required=""
+                          id="id_specialization" placeholder="Специализация"></p>
+                <p><input class="input_1" type="password" name="password_1" maxlength="20"
+                          minlength="6" required="" id="id_password_1" placeholder="Пароль"></p>
+                <p><input class="input_1" type="password" name="password_2" maxlength="20"
+                          minlength="6" required="" id="id_password_2" placeholder="Подтвердите пароль"></p>
 
-                    <p><input class="input_1" type="text" name="last_name" maxlength="150" id="id_last_name" placeholder="Фамилия"></p>
-                    <p><input class="input_1"  type="text" name="first_name" maxlength="150" id="id_first_name" placeholder="Имя"></p>
-                    <p><input class="input_1" type="number" name="age" required="" id="id_age" placeholder="Возраст"></p>
-                    <p><input class="input_1" type="text" name="username" maxlength="254"
-                           id="id_email" placeholder="username"></p>
-                    <p><input class="input_1" type="text" name="specialization" maxlength="150" required="" id="id_specialization" placeholder="Специализация"></p>
-                   <p> <input class="input_1" type="password" name="password_1" maxlength="20"
-                           minlength="6" required="" id="id_password_1" placeholder="Пароль"></p>
-                   <p> <input class="input_1" type="password" name="password_2" maxlength="20"
-                           minlength="6" required="" id="id_password_2" placeholder="Подтвердите пароль"></p>
-
-                    <div class="form-group g-recaptcha" data-sitekey="6LfBMSgcAAAAAFq5Ctxc2Ep8K1STmdfBaP6ZFbfY"></div>
-                    <input type="submit" class="btn-log" value="Register">
-                    {% if messages %}
-                        {% for message in messages %}
-                            {{ message }}
-                        {% endfor %}
-                    {% endif %}
-                </div>
-            </form>
-        </div>
+                <div class="form-group g-recaptcha" data-sitekey="6LfBMSgcAAAAAFq5Ctxc2Ep8K1STmdfBaP6ZFbfY"></div>
+                <input type="submit" class="btn-log" value="Register">
+                {% if messages %}
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </form>
     </div>
->>>>>>> 88a9906bf703f27d0b7cb42620d35f90fef40a3a
+</div>
 </body>
 </html>
