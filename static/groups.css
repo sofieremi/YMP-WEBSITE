@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #fef6e4;
+    /*background-image: linear-gradient(to bottom right, #1e1b2d, #828092);*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    margin: auto;
+    width: 100%;
+    padding: 2.2rem;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+.row {
+    margin: auto 0;
+}
+.card {
+    float: left;
+    padding: 3rem;
+    min-width: 700px;
+}
+.card .menu-content {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.card .menu-content::before, .card .menu-content::after {
+    content: '';
+    display: table;
+}
+.card .menu-content::after {
+    clear: both;
+}
+.card .menu-content li {
+    display: inline-block;
+}
+.card .menu-content a {
+    color: #fff;
+}
+.card .wrapper {
+    background-color: #fff;
+    min-height: 410px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+.card .wrapper:hover .data {
+    transform: translateY(0);
+}
+.card .data {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(calc(80px + 1em));
+    transition: transform 0.3s;
+}
+.card .data .content {
+    padding: 1.7em;
+    position: relative;
+    z-index: 1;
+}
+.card .type {
+    font-size: 12px;
+}
+.card .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.card .text {
+    height: 60px;
+    margin: 0;
+}
+.card input[type='checkbox'] {
+    display: none;
+}
+.card input[type='checkbox']:checked + .menu-content {
+    transform: translateY(-60px);
+}
+.example-3 .wrapper {
+    background: url(https://images.unsplash.com/photo-1547405358-4ef2671bb1bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80) 30% 1% / cover no-repeat;
+    border-radius: 14px;
+}
+.example-3 .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem;
+}
+.example-3 .content {
+    background-color: #333;
+    color: white;
+    box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+}
+.example-3 .title a {
+    color: white;
+}
+.example-3 .menu-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+}
+.example-3 .menu-content li {
+    text-align: center;
+    width: 3rem;
+    background-color: #333;
+    height: 3rem;
+    position: relative;
+}
+.example-3 .menu-content a {
+    font-size: 24px;
+}
+.alternate-card {
+    float: left;
+    padding: 1rem;
+    min-width: 500px;
+}
+.alternate-card .menu-content {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.alternate-card .menu-content::before, .alternate-card .menu-content::after {
+    content: '';
+    display: table;
+}
+.alternate-card .menu-content::after {
+    clear: both;
+}
+.alternate-card .menu-content li {
+    display: inline-block;
+}
+.alternate-card .menu-content a {
+    color: #fff;
+}
+.alternate-card .wrapper {
+    background-color: #fff;
+    min-height: 540px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+.alternate-card .wrapper:hover .data {
+    transform: translateY(0);
+}
+.alternate-card .data {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(calc(100% + 1em));
+    transition: transform 0.3s;
+}
+.alternate-card .data .content {
+    padding: 1.5em;
+    position: relative;
+    z-index: 1;
+}
+.alternate-card .type {
+    font-size: 12px;
+}
+.alternate-card .title {
+    margin-top: 10px;
+}
+.alternate-card .text {
+    height: 325px;
+    margin: 0;
+}
+.alternate-card input[type='checkbox'] {
+    display: none;
+}
+.alternate-card input[type='checkbox']:checked + .menu-content {
+    transform: translateY(-60px);
+}

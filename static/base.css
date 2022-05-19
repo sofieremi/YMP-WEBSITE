@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+:root {
+    --header-height: 3rem;
+    --surface-color: #fff;
+    --curve: 40;
+    /*========== Colors ==========*/
+    --hue: 174;
+    --sat: 63%;
+    /*--first-color: hsl(var(--hue), var(--sat), 40%);*/
+    --first-color: #9bb9df;
+    /*--first-color: #9a8174;*/
+    --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+    --title-color: hsl(var(--hue), 12%, 15%);
+    --text-color: hsl(var(--hue), 8%, 35%);
+    --body-color: #f9f9f9;
+    --container-color: #FFF;
+    --bg: hsl(var(--hue), 10%, 90%);
+    --fg: hsl(var(--hue), 10%, 10%);
+    --transDur: 0.15s;
+    /*font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));*/
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Nunito', sans-serif;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --tiny-font-size: .825rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    /*
+    */
+    --footer-bg: #1c2444;
+    --color: #f2f3fb;
+    --color-smooth: #9da2ae;
+    --input-border: #3a456a;
+    --btn-bg-color: #f1f2fc;
+    --btn-hover-bg: #d5d9f6;
+    --btn-color: #1e2641;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --h1-font-size: 2.25rem;
+        --normal-font-size: 1.3rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    background-color: #fef6e4;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 6.5rem 4rem;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*background-color: #eae8e8;*/
+    z-index: var(--z-fixed);
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(50px);
+    transition: .4s;
+}
+
+.home__layout {
+    display: grid;
+}
+
+/*=============== NAV ===============*/
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.nav__img {
+    width: 32px;
+    border-radius: 50%;
+}
+
+
+.nav__list,
+.nav__link {
+    display: flex;
+}
+
+.nav__link {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    color: #2e6fb1;
+    font-weight: 600;
+}
+
+.nav__list {
+    justify-content: space-around;
+}
+
+.nav__name {
+    font-size: var(--tiny-font-size);
+}
+
+.nav__icon {
+    font-size: 1.5rem;
+}
+
+.active-link {
+    position: relative;
+    color: var(--first-color);
+    transition: .3s;
+}
+
+.scroll-header {
+    box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+}
+
+/*=============== MEDIA QUERIES ===============*/
+@media screen and (max-width: 320px) {
+    .nav__name {
+        display: none;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    .nav__list {
+        justify-content: center;
+        column-gap: 3rem;
+    }
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 767px) {
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .section {
+        padding: 7rem 0 2rem;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem); /* 4.5rem */
+    }
+
+    .nav__img {
+        display: none;
+    }
+
+    .nav__icon {
+        display: none;
+    }
+
+    .nav__name {
+        font-size: var(--normal-font-size);
+    }
+
+    .nav__link:hover {
+        color: var(--first-color);
+    }
+
+    .active-link::before {
+        content: '';
+        position: absolute;
+        bottom: -.75rem;
+        width: 4px;
+        height: 4px;
+        background-color: var(--first-color);
+        border-radius: 50%;
+    }
+
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/**/
+footer {
+    font-size: 16px;
+    background: var(--footer-bg);
+    padding: 2em 4em;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+footer ul {
+    list-style: none;
+}
+
+.col {
+    flex: 1;
+    padding:0 30px;
+}
+
+.col-title {
+    color: var(--color);
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 0.5em 0;
+}
+
+.col-list a {
+    color: var(--color-smooth);
+    text-decoration: none;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.col-list a:hover,
+.col-list a:focus {
+    text-decoration: underline;
+}
+
+.col-list li {
+    margin-top: 20px;
+}
+
+.subscribe-form,
+.social-media {
+    display: flex;
+    gap: 0.5em;
+    padding: 0.5em 0;
+}
+
+.subscribe-input {
+    width: auto;
+    flex: 1;
+    background: transparent;
+    border: 0.06em solid var(--input-border);
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    transition: all 0.25s ease 0s;
+    display: inline-block;
+    color: var(--color-smooth);
+}
+
+.subscribe-input:focus {
+    outline: none;
+    border-color: var(--color);
+    color: var(--color);
+}
+
+.subscribe-btn {
+    background: var(--btn-bg-color);
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    transition: all 0.25s ease 0s;
+    display: inline-block;
+    color: var(--btn-color);
+    cursor: pointer;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+    background: var(--btn-hover-bg);
+}
+
+.form-title,
+.social-col-title {
+    font-size: 1em;
+    color: var(--color);
+    font-weight: 500;
+}
+
+.social-media {
+    flex-direction: column;
+}
+
+.social-media-list {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.social-media-list a {
+    padding: 0.5em;
+    color: var(--color-smooth);
+    display: flex;
+    border-radius: 0.3em;
+    transition: all 0.25s ease 0s;
+}
+
+.social-media-list a:hover,
+.social-media-list a:focus {
+    color: var(--color);
+    background: #ffffff1a;
+}
+
+.social-media-list svg {
+    width: 1.5em;
+    height: 1.5em;
+    transition: all 0.25s ease 0s;
+}
+
+@media screen and (max-width: 750px) {
+    footer {
+        padding: 2em;
+        flex-direction: column;
+    }
+}
