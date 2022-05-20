@@ -59,8 +59,6 @@
                     <a href={% url 'profile' %} class="nav__link" id="profile_page">
                         <i class='bx bx-book-alt nav__icon'></i>
                         <span class="nav__name">Профиль</span>
-                <li>
-                    <a href={% url 'login' %}>
                     </a>
                 </li>
             </ul>
@@ -70,6 +68,40 @@
 
 <section>
     <div class="container">
+        <div>
+            <div class="card_register">
+                <div class="card-body">
+                    <h4 class="card-title">Register account</h4>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="reg_form_view">
+
+                            <p><input class="input_1" type="text" name="last_name" maxlength="150" id="id_last_name"
+                                      placeholder="Фамилия"></p>
+                            <p><input class="input_1" type="text" name="first_name" maxlength="150" id="id_first_name"
+                                      placeholder="Имя"></p>
+                            <p><input class="input_1" type="number" name="age" required="" id="id_age" placeholder="Возраст"></p>
+                            <p><input class="input_1" type="text" name="username" maxlength="254"
+                                      id="id_email" placeholder="username"></p>
+                            <p><input class="input_1" type="text" name="specialization" maxlength="150" required=""
+                                      id="id_specialization" placeholder="Специализация"></p>
+                            <p><input class="input_1" type="password" name="password_1" maxlength="20"
+                                      minlength="6" required="" id="id_password_1" placeholder="Пароль"></p>
+                            <p><input class="input_1" type="password" name="password_2" maxlength="20"
+                                      minlength="6" required="" id="id_password_2" placeholder="Подтвердите пароль"></p>
+
+                            <div class="form-group g-recaptcha" data-sitekey="6LfBMSgcAAAAAFq5Ctxc2Ep8K1STmdfBaP6ZFbfY"></div>
+                            <input type="submit" class="btn-log" value="Register">
+                            {% if messages %}
+                                {% for message in messages %}
+                                    {{ message }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="content">
             <h1>Cтудия современной хореографии "Грани"
             </h1>
@@ -227,37 +259,6 @@
 
 
 
-<div class="card_register">
-    <div class="card-body">
-        <h4 class="card-title">Register account</h4>
-        <form method="post">
-            {% csrf_token %}
-            <div class="reg_form_view">
 
-                <p><input class="input_1" type="text" name="last_name" maxlength="150" id="id_last_name"
-                          placeholder="Фамилия"></p>
-                <p><input class="input_1" type="text" name="first_name" maxlength="150" id="id_first_name"
-                          placeholder="Имя"></p>
-                <p><input class="input_1" type="number" name="age" required="" id="id_age" placeholder="Возраст"></p>
-                <p><input class="input_1" type="text" name="username" maxlength="254"
-                          id="id_email" placeholder="username"></p>
-                <p><input class="input_1" type="text" name="specialization" maxlength="150" required=""
-                          id="id_specialization" placeholder="Специализация"></p>
-                <p><input class="input_1" type="password" name="password_1" maxlength="20"
-                          minlength="6" required="" id="id_password_1" placeholder="Пароль"></p>
-                <p><input class="input_1" type="password" name="password_2" maxlength="20"
-                          minlength="6" required="" id="id_password_2" placeholder="Подтвердите пароль"></p>
-
-                <div class="form-group g-recaptcha" data-sitekey="6LfBMSgcAAAAAFq5Ctxc2Ep8K1STmdfBaP6ZFbfY"></div>
-                <input type="submit" class="btn-log" value="Register">
-                {% if messages %}
-                    {% for message in messages %}
-                        {{ message }}
-                    {% endfor %}
-                {% endif %}
-            </div>
-        </form>
-    </div>
-</div>
 </body>
 </html>
