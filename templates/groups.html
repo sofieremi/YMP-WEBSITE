@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВГУЭС</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="{% static 'groups.css' %}">
+</head>
+<body>
+<header class="header" id="header">
+    <nav class="nav container">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="38"
+                 viewBox="0 0 120 38">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: #2e6fb1;
+                            fill-rule: evenodd;
+                            filter: url(#filter);
+                        }
+                    </style>
+                    <filter id="filter" x="99" y="35" width="120" height="38" filterUnits="userSpaceOnUse">
+                        <feOffset result="offset" dy="2" in="SourceAlpha"/>
+                        <feGaussianBlur result="blur" stdDeviation="1.414"/>
+                        <feFlood result="flood" flood-opacity="0.12"/>
+                        <feComposite result="composite" operator="in" in2="blur"/>
+                        <feBlend result="blend" in="SourceGraphic"/>
+                    </filter>
+                </defs>
+                <path class="cls-1"
+                      d="M163.331,35h9.1L164.88,57.349h-0.026l-0.593,1.756c-1.761,5.218-7.209,9.525-12.334,9.872l0,0.008h-0.138c-0.173.01-.346,0.014-0.518,0.014h-0.882c-0.173,0-.344,0-0.51-0.014h-9.138l3.338-9.88,0.056-.169h7.593a5.618,5.618,0,0,0,4.791-3.769l0.075-.218,0.257-.758H149.9c-0.935,0-4.166,0-2.8-4.03l0.955-2.824,0.818-2.427L152.22,35H160l-4.623,13.7H158.7c0.553-1.638,3.359-9.942,4.628-13.7h0Zm-19.414,0-0.011.032c-5.166.275-10.7,4.615-12.479,9.881L128.3,54.173l-1.665,4.932-3.339,9.88h9.139c0.1,0.006.2,0.01,0.3,0.013L139.6,48.684a5.767,5.767,0,0,1,4.988-3.8h1.506L149.432,35h-5.515Zm63.821,0H217l-3.342,9.891h-5.991a5.619,5.619,0,0,0-4.791,3.769l-0.074.22-2.126,6.292L199.4,58.937h11.3l-0.056.169c-1.763,5.218-7.211,9.525-12.335,9.872l0,0.008h-0.136c-0.174.01-.348,0.014-0.52,0.014h-0.883c-0.174,0-.343,0-0.509-0.014h-9.138l3.339-9.88,1.666-4.932,3.129-9.264c1.778-5.266,7.312-9.606,12.477-9.881L207.738,35h0Zm-87.115,0h10.363L126.7,47.656a5.3,5.3,0,0,1-4.13,3.769l3.572,0.019-2,5.905h-0.025l-0.592,1.756c-1.763,5.218-7.211,9.525-12.336,9.872l0,0.008H111.05c-0.174.01-.347,0.014-0.52,0.014h-0.882q-0.26,0-.51-0.014H100l3.338-9.88L105,54.173l3.13-9.264c1.779-5.266,7.312-9.606,12.478-9.881L120.623,35h0Zm-2.72,8.891c-1.023,0-2.233,1.3-2.576,2.289l-0.94,2.725h5.081l1.724-5.014H117.9Zm-5.421,10.654-1.9,5.876h3.01c1.575,0,2.637-1.634,2.878-2.362l1.162-3.515h-5.146ZM184.36,35l-0.011.032c-5.16.275-10.685,4.6-12.471,9.859h10.741l-1.274,3.769h0l-0.074.22h-8.825l-1.924,5.695h8.827l-0.129.379-0.075.218a5.62,5.62,0,0,1-4.792,3.769h-7.222l-0.056.169-3.338,9.88h9.137c0.168,0.01.337,0.014,0.509,0.014h0.884q0.258,0,.519-0.014h0.138l0-.008c5.124-.347,10.572-4.654,12.335-9.872l0.592-1.756h0.025L195.43,35H184.36Z"
+                      transform="translate(-99 -35)"/>
+            </svg>
+        </div>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href={% url 'main' %} class="nav__link active-link id="main_page">
+                        <i class='bx bx-home-alt nav__icon'></i>
+                        <span class="nav__name">Главная</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href={% url 'groups' %} class="nav__link" id="connections_page">
+                        <i class='bx bx-user nav__icon'></i>
+                        <span class="nav__name">Объединения</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href={% url 'news' %} class="nav__link" id="news_page">
+                        <i class='bx bx-briefcase-alt nav__icon'></i>
+                        <span class="nav__name">Новости</span>
+                <li class="nav__item">
+                    <a href={% url 'profile' %} class="nav__link" id="profile_page">
+                        <i class='bx bx-book-alt nav__icon'></i>
+                        <span class="nav__name">Профиль</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="example-1 card">
+                <div class="wrapper">
+                    <div class="data">
+                        <div class="content">
+                            <h1 class="title"><a href="#">Cтудия современной хореографии "Грани"</a></h1>
+                            <p class="text">Работа коллектива крайне разносторонняя, она течет в русле модерна,
+                                джаза, хип-хопа, эстрады и даже танцев народов мира.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="example-2 card">
+                <div class="wrapper">
+                    <div class="data">
+                        <div class="content">
+                            <h1 class="title"><a href="#">Вокальный коллектив "Престиж" ВГУЭС</a></h1>
+                            <p class="text">Уникальность коллектива в том, что его деятельность осуществляется
+                                исключительно
+                                на творческой основе. Каждый учебный год несет в себе что-то новое, интересное,
+                                неповторимое.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="example-3 card">
+                <div class="wrapper">
+                    <div class="data">
+                        <div class="content">
+                            <h1 class="title"><a href="#">Танцевальный проект "1054"</a></h1>
+                            <p class="text">Основное танцевальное направление - современная хореография:
+                                джаз-модерн;
+                                эстрада;
+                                хип-хоп.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="example-4 card">
+                <div class="wrapper">
+                    <div class="data">
+                        <div class="content">
+                            <h1 class="title"><a href="#">Режиссерско-постановочная группа «Статус»</a></h1>
+                            <p class="text">РПГ обладает опытом организации и проведения мероприятий,
+                                в которых задействованы талантливые ведущие и аниматоры.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer" id="footer">
+
+  <span class="col">
+    <h3 class="col-title">ПРИЁМНАЯ КОМИССИЯ</h3>
+    <nav class="col-list">
+      <ul>
+        <li><a href="#">Личный Кабинет Абитуриента</a></li>
+        <li><a href="#">Центр «Абитуриент» <br> 8 (423) 240-40-23</a></li>
+        <li><a href="#">Задать вопрос приемной комиссии <br> abiturient@vvsu.ru</a></li>
+        <li><a href="#">Служба технической поддержки <br> 8 (423) 240-40-14 <br> support@vvsu.ru</a></li>
+      </ul>
+    </nav>
+  </span>
+
+    <span class="col">
+    <h3 class="col-title">МОЛОДЕЖНАЯ ПОЛИТИКА В РОССИИ</h3>
+    <nav class="col-list">
+      <ul>
+        <li><a href="#">Федеральное агентство по делам молодежи (Росмолодежь)</a></li>
+        <li><a href="#">Департамент по делам молодежи Приморского края</a></li>
+        <li><a href="#">Центр содействия развитию молодежи Приморского края</a></li>
+        <li><a href="#">Управление по делам молодежи администрации города Владивостока</a></li>
+        <li><a href="#">Молодежный ресурсный центр города Владивостока</a></li>
+      </ul>
+    </nav>
+  </span>
+
+    <span class="col">
+    <h3 class="col-title">МОЛОДЕЖНЫЕ ОБЩЕСТВЕННЫЕ ОРГАНИЗАЦИИ</h3>
+    <nav class="col-list">
+      <ul>
+        <li><a href="#">Ассоциация студенческих спортивных клубов России</a></li>
+        <li><a href="#">Ассоциация волонтерских центров</a></li>
+        <li><a href="#">Российский Союз Молодежи</a></li>
+        <li><a href="#">Волонтеры победы</a></li>
+        <li><a href="#">Российское движение школьников</a></li>
+      </ul>
+    </nav>
+  </span>
+    <span class="col">
+{#    <div class="subscribe-form-holder">#}
+{#      <h3 class="form-title">Subscribe to our email newsletter</h3>#}
+{#      <form action="#" onsubmit="return false" class="subscribe-form">#}
+{#        <input type="email" name="email" id="email" class="email subscribe-input" autocomplete="off"#}
+{#               placeholder="Your email">#}
+{#        <button type="submit" class="subscribe-btn">Subscribe</button>#}
+{#      </form>#}
+{#    </div>#}
+    <div class="social-media">
+      <h3 class="social-col-title">Подпишитесь на нас</h3>
+      <ul class="social-media-list">
+        <li><a href="#" class="facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                              fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg></a></li>
+        <li><a href="#" class="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                             fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+            </svg></a></li>
+        <li><a href="#" class="instagram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                               fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg></a></li>
+      </ul>
+    </div>
+        <nav class="col-list">
+      <ul>
+        <li><a href="#">Ассоциация студенческих спортивных клубов России</a></li>
+        <li><a href="#">Ассоциация волонтерских центров</a></li>
+        <li><a href="#">Российский Союз Молодежи</a></li>
+        <li><a href="#">Волонтеры победы</a></li>
+        <li><a href="#">Российское движение школьников</a></li>
+      </ul>
+            </nav>
+  </span>
+
+</footer>
+<script>
+    let main_page = document.getElementById('main_page')
+    let connections_page = document.getElementById('connections_page')
+    let news_page = document.getElementById('news_page')
+    let profile_page = document.getElementById('profile_page')
+    let prev_btn = main_page
+    window.onload = function () {
+        prev_btn.classList.add('active-link')
+    }
+    main_page.addEventListener('click', function () {
+        if (main_page !== prev_btn) {
+            main_page.classList.add('active-link')
+            prev_btn.classList.remove('active-link')
+            prev_btn = main_page
+        }
+    })
+    connections_page.addEventListener('click', function () {
+        if (connections_page !== prev_btn) {
+            connections_page.classList.add('active-link')
+            prev_btn.classList.remove('active-link')
+            prev_btn = connections_page
+        }
+    })
+    news_page.addEventListener('click', function () {
+        if (news_page !== prev_btn) {
+            news_page.classList.add('active-link')
+            prev_btn.classList.remove('active-link')
+            prev_btn = news_page
+        }
+    })
+    profile_page.addEventListener('click', function () {
+        if (profile_page !== prev_btn) {
+            profile_page.classList.add('active-link')
+            prev_btn.classList.remove('active-link')
+            prev_btn = profile_page
+        }
+    })
+</script>
+</body>
+</html>
