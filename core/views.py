@@ -10,7 +10,7 @@ def register(request):
             new_user = user_form.save(commit=False)
             new_user.set_password(user_form.cleaned_data['password_1'])
             new_user.save()
-            return render(request, 'registration/login.html', {'new_user': new_user})
+            return render(request, 'profile.html', {'new_user': new_user})
         else:
             user_form = StudentRegistrationForm()
         return render(request, 'register.html', {'user_form': user_form})

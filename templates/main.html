@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ВГУЭС</title>
     <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="{% static 'mainstyle.css' %}">
 </head>
 <body>
 <header class="header" id="header">
@@ -55,8 +56,6 @@
                         <span class="nav__name">Новости</span>
                     </a>
                 <li>
-
-
                 <li class="nav__item">
                     <a href={% url 'profile' %} class="nav__link" id="profile_page">
                         <i class='bx bx-book-alt nav__icon'></i>
@@ -68,8 +67,57 @@
     </nav>
 </header>
 <section>
-    <img src="/static/images/people.svg" alt="">
+    <div class="content">
+        <div class="svg">
+            <img src="/static/images/people.svg" alt="">
+        </div>
+        <div class="description">
+            <h1>Молодежная политика</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Facere minus odit quidem suscipit? Asperiores consequuntur
+                corporis debitis dolorem esse excepturi facilis, maxime nisi
+                quaerat, quam recusandae reiciendis tempora temporibus voluptas?
+            </p>
+            <br>
+            <a href="#" class="зарегистрироваться"></a>
+        </div>
+    </div>
 </section>
+<div class="page page-top">
+    <div class="wrap">
+        <h2>ИНФОРМАЦИЯ</h2>
+        <div class="courses">
+            <div class="courses-item">
+                <div class="courses_img"><img src="/static/images/1.svg" alt=""></div>
+                <div class="courses_text">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi deserunt fugiat molestias natus nemo quibusdam repudiandae velit veritatis voluptatem.</p>
+                </div>
+            </div>
+            <div class="courses-item">
+                <div class="courses_img"><img src="/static/images/2.svg" alt=""></div>
+                <div class="courses_text">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae, iusto placeat praesentium quam quasi. Accusamus dolores expedita velit voluptates.</p>
+                </div>
+            </div>
+            <div class="courses-item">
+                <div class="courses_img"><img src="/static/images/3.svg" alt=""></div>
+                <div class="courses_text">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eaque eos et explicabo, omnis pariatur? Consequuntur eveniet impedit laborum possimus!</p>
+                </div>
+            </div>
+            <div class="courses-item">
+                <div class="courses_img"><img src="/static/images/4.svg" alt=""></div>
+                <div class="courses_text">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa delectus, doloribus id illo ipsa magni odit quibusdam totam voluptate voluptatem!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <footer class="footer" id="footer">
 
   <span class="col">
